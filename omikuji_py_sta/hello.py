@@ -10,10 +10,11 @@ from time import sleep
 
 app = Flask(__name__)
 
-@app.route('/')
-def top():
+@app.route('/<user>')
+def top(user=None):
     driver = webdriver.Chrome()
-    driver.get("http://127.0.0.1:8888/execution/mya-")
+    url = "http://127.0.0.1:8888/execution/" + user
+    driver.get(url)
     return render_template('index.html',title='running')
 
 
