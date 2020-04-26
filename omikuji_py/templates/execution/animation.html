@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
+<script>
+  var run_id = {{ run_id|tojson }};
+  var num = {{ num|tojson }};
+</script>
 <div style="height:5%;"></div>
 <div id="num" class="inner" style="top:30%;font-size:128px;"></div>
 <div class="shake-vertical shake-constant omikuji_img">

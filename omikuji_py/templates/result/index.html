@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
+<script>
+  var run_id = {{ run_id|tojson }};
+  var num = {{ num|tojson }};
+</script>
 <style>
  ul { list-style-type: none; }
  li { display: inline-block; }
@@ -8,11 +12,12 @@
   <div style="height:2%;"></div>
   <div style="font-size:42px;font-weight: bold;">結果</div>
   <div style="height:2%;"></div>
+  <h2>{{num}}</h2>
   <div style="font-size:22px;">※画像を見るときは一度画像にタップしてください。</div>
   <ul id="images" style="padding:0;">
-    <li><img src="/static/image/{{ num }}.png" class="inner_photo"></li>
+    <li><img src="/static/image/33.png" class="inner_photo"></li>
   </ul>
-  <a href="../" class="btn-square-soft" style="width:200px;background-color: #FFBF00;">TOPへ</a>
+  <!--<a href="../" class="btn-square-soft" style="width:200px;background-color: #FFBF00;">TOPへ</a>-->
 </div>
 <script src="/static/js/result.js" charset="utf-8"></script>
 {% endblock %}

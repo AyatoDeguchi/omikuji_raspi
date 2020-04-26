@@ -8,28 +8,30 @@ from flask import Flask, render_template
 #import chromedriver_binary
 from time import sleep
 import pyautogui as pgui
+import random
 
 app = Flask(__name__)
+num = -1
 
 @app.route('/')
 def top():
     return render_template('index.html', title='待機')
 
-@app.route('/execution/<user>')
-def execution(user=None):
+@app.route('/execution/<run_id>')
+def execution(run_id=None):
     pgui.keyDown('f11')
     pgui.keyUp('f11')
-    name = "who"
     #return name
-    return render_template('execution/index.html', title='実行', name=user)
+    return render_template('execution/index.html', title='実行', run_id=run_id)
 
-@app.route('/animation/<user>')
-def animation(user=None):
-    return render_template('execution/animation.html', title='実行', name=user)
+@app.route('/animation/<run_id>')
+def animation(run_id=None):
+    num = random.randint(1,10)
+    return render_template('execution/animation.html', title='実行', run_id=run_id , num = num)
 
-@app.route('/result/<user>')
-def result(user=None):
-    return render_template('result/index.html', title='結果', name=user , num=33)
+@app.route('/result/<run_id>')
+def result(run_id=None):
+    return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')
 def webclose():

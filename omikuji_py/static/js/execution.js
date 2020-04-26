@@ -1,5 +1,5 @@
 function func(){
-  location.href = "/animation/mya-";
+  location.href = "/animation/" + run_id;
 }
 window.onload = function() {
   setTimeout('func();', 3000);

@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
 <!-- php session sta -->
+<script>
+  var run_id = {{ run_id|tojson }};
+</script>
 <div style="height:5%;"></div>
 <div id="omikuji_click" class="shake-chunk  shake-constant">
   <img src="/static/image/omikuji_hako_.png" />
