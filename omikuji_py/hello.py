@@ -29,7 +29,7 @@ def animation(run_id=None):
     num = random.randint(1,10)
     return render_template('execution/animation.html', title='実行', run_id=run_id , num = num)
 
-@app.route('/result/<run_id>', methods="GET")
+@app.route('/result/<run_id>', methods=['GET', 'POST'])
 def result(run_id=None):
     num = request.args.get('num')
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
