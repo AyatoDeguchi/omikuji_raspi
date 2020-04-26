@@ -31,6 +31,7 @@ def animation(run_id=None):
 
 @app.route('/result/<run_id>')
 def result(run_id=None):
+    num = request.args.get('num')
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')

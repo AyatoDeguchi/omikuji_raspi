@@ -6,10 +6,8 @@ window.onload = function() {
   var parameter = {"run_id": run_id,"num": num};
   exePHPFunc_deactivated(parameter).done(function(data_status){
     console.log("data_status:"+data_status);
-
-
-    setTimeout('func();', 4000);
   });
+  setTimeout('func();', 4000);
 }
 
 

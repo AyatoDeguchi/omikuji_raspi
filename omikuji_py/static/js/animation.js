@@ -3,7 +3,7 @@ function omikuji_6(){
   $('#fadein').fadeIn(1500);
   //$('#fadeout').addClass('fadeout');  // bodyに class="fadeout"を挿入
   setTimeout(function(){
-    window.location = '/result/' + run_id;  // 秒後に取得したURLに遷移
+    window.location = '/result/' + run_id + "?num=" + num;  // 秒後に取得したURLに遷移
   }, 1000);
 }
 function omikuji_5(){
