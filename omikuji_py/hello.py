@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 #https://qiita.com/zaburo/items/5091041a5afb2a7dffc8
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 #import chromedriver_binary
 from time import sleep
 import pyautogui as pgui
