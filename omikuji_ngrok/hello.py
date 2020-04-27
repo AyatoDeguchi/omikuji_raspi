@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/<ngrok_url>')
 def top(ngrok_url=None):
-    return render_template('ngrok.html',title='running',ngrok_url='ngrok_url')
+    return render_template('ngrok.html',title='running',ngrok_url= ngrok_url)
 
 
 if __name__ == "__main__":
