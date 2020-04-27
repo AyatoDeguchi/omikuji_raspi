@@ -10,10 +10,6 @@ from time import sleep
 
 app = Flask(__name__)
 
-@app.route('/')
-def top():
-    return render_template('index.html', title='待機')
-
 @app.route('/<ngrok_url>')
 def top(ngrok_url=None):
     return render_template('ngrok.html',title='running',ngrok_url='ngrok_url')
