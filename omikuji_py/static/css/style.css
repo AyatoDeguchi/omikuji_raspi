@@ -84,3 +84,7 @@ body{
     max-height: 60%;
     margin: auto;
 }
+
+.omikuji_img img{
+  height: 600px;
+}
