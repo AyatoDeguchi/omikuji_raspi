@@ -26,7 +26,7 @@ def execution(run_id=None):
 
 @app.route('/animation/<run_id>')
 def animation(run_id=None):
-    num = random.randint(1,10)
+    num = random.randint(1,6)
     return render_template('execution/animation.html', title='実行', run_id=run_id , num = num)
 
 @app.route('/result/<run_id>', methods=['GET', 'POST'])
