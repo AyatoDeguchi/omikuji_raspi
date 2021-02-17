@@ -29,6 +29,7 @@ function omikuji_2(){
   setTimeout('omikuji_3();', 100);
 }
 window.onload = function() {
+  run_id_view.innerHTML = run_id.slice( -3 );
    setTimeout('omikuji_2();', 3000);
    $('#fadeout').removeClass('fadeout');
 }
