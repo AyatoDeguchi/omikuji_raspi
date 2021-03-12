@@ -11,7 +11,6 @@ from time import sleep
 import pyautogui as pgui
 import random
 
-options.add_argument('--start-fullscreen')
 
 app = Flask(__name__)
 num = -1
