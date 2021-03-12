@@ -16,7 +16,7 @@ app = Flask(__name__)
 num = -1
 
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ['enable-automation'])
+options.add_experimental_option("excludeSwitches", ['enable-automation', 'load-extension'])
 options.add_argument('--start-fullscreen')
 
 @app.route("/favicon.ico")
