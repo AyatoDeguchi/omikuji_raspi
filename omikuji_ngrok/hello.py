@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/<ngrok_url>')
 def top(ngrok_url=None):
     url = "http://my-16421.azurewebsites.net/omikuji/api/ngrok_update.php"
-    get_url_info = requests.get(url,{'ngrok_url':ngrok_url}).text
+    get_url_info = requests.post(url,{'ngrok_url':ngrok_url}).text
     return render_template('ngrok.html',title='running',ngrok_url= ngrok_url)
 
 

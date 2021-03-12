@@ -34,7 +34,7 @@ def animation(run_id=None):
 def result(run_id=None):
     num = request.args.get('num')
     url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php"
-    get_url_info = requests.get(url,{"run_id": run_id,"num": num}).text
+    get_url_info = requests.post(url,{"run_id": run_id,"num": num}).text
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')

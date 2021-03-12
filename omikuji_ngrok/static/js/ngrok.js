@@ -5,7 +5,7 @@ window.onload = function() {
     });*/
 }
 
-
+/*
 // deactivatedにする
 function exePHPFunc_ngrok_update(parameter)
 {
@@ -19,3 +19,4 @@ function exePHPFunc_ngrok_update(parameter)
 	});
 	return defer.promise();
 }
+*/

@@ -11,7 +11,7 @@ window.onload = function() {
   setTimeout('func();', 4000);
 }
 
-
+/*
 // deactivatedにする
 function exePHPFunc_deactivated(parameter)
 {
@@ -24,4 +24,4 @@ function exePHPFunc_deactivated(parameter)
 		success: defer.resolve,
 	});
 	return defer.promise();
-}
+}*/
