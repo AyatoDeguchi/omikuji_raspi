@@ -11,8 +11,8 @@ from time import sleep
 app = Flask(__name__)
 
 options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ['enable-automation', 'load-extension'])
 options.add_argument('--start-fullscreen')
-options.add_argument("--disable-infobars")
 
 @app.route('/<user>')
 def top(user=None):
