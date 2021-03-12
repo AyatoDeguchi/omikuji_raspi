@@ -33,8 +33,8 @@ def animation(run_id=None):
 @app.route('/result/<run_id>', methods=['GET', 'POST'])
 def result(run_id=None):
     num = request.args.get('num')
-    url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php"
-    requests.post(url,{"run_id": run_id,"num": num})
+    url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php?run_id=" + run_id + "&num=" + num
+    requests.get(url)
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')
