@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 #https://www.seleniumqref.com/api/python/window_set/Python_close.html
 import requests
-import json
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -35,7 +34,7 @@ def animation(run_id=None):
 def result(run_id=None):
     num = request.args.get('num')
     url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php"
-    temp = requests.post(url,json.dumps({"run_id": run_id,"num": num}),headers={'Content-Type': 'application/json'}).text
+    requests.post(url,{"run_id": run_id,"num": num})
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')
