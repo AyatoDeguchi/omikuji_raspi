@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #https://www.seleniumqref.com/api/python/window_set/Python_close.html
+import requests
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -32,6 +33,8 @@ def animation(run_id=None):
 @app.route('/result/<run_id>', methods=['GET', 'POST'])
 def result(run_id=None):
     num = request.args.get('num')
+    url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php"
+    get_url_info = requests.get(url,{"run_id": run_id,"num": num}).text
     return render_template('result/index.html', title='結果', run_id=run_id , num=num)
 
 @app.route('/webclose')
@@ -40,8 +43,8 @@ def webclose():
     pgui.keyDown('f4')
     pgui.keyUp('alt')
     pgui.keyUp('f4')
-    
-    
+
+
 
 
 '''
@@ -56,6 +59,8 @@ if __name__ == "__main__":
 
 
 '''
+・requestsのインストール
+
 ・flaskのインストール
 ・※もう一つの方のegrokでブラウザup
 ・seleniumのインストール

@@ -1,8 +1,8 @@
 window.onload = function() {
-    var parameter = {"ngrok_url": ngrok_url};
+    /*var parameter = {"ngrok_url": ngrok_url};
     exePHPFunc_ngrok_update(parameter).done(function(data_status){
       console.log("data_status:"+data_status);
-    });
+    });*/
 }
 
 
