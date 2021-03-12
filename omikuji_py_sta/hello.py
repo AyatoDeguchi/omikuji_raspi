@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 options = webdriver.ChromeOptions()
 options.add_argument('--start-fullscreen')
+options.add_argument("--disable-infobars")
 
 @app.route('/<user>')
 def top(user=None):
