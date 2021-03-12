@@ -15,6 +15,10 @@ import random
 app = Flask(__name__)
 num = -1
 
+options = webdriver.ChromeOptions()
+options.add_argument('--start-fullscreen')
+options.add_argument("--disable-infobars")
+
 @app.route("/favicon.ico")
 def favicon():
     return app.send_static_file("favicon.ico")
