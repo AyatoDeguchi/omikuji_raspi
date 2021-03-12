@@ -11,6 +11,8 @@ from time import sleep
 import pyautogui as pgui
 import random
 
+options.add_argument('--start-fullscreen')
+
 app = Flask(__name__)
 num = -1
 
@@ -24,8 +26,8 @@ def top():
 
 @app.route('/execution/<run_id>')
 def execution(run_id=None):
-    pgui.keyDown('f11')
-    pgui.keyUp('f11')
+    #pgui.keyDown('f11')
+    #pgui.keyUp('f11')
     #return name
     return render_template('execution/index.html', title='実行', run_id=run_id)
 

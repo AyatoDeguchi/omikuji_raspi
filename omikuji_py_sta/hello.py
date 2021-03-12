@@ -10,12 +10,15 @@ from time import sleep
 
 app = Flask(__name__)
 
+options.add_argument('--window-size=1,1')
+
 @app.route('/<user>')
 def top(user=None):
     driver = webdriver.Chrome()
     url = "http://127.0.0.1:8888/execution/" + user
     driver.get(url)
-    return render_template('index.html',title='running')
+    #return render_template('index.html',title='running')
+    return ""
 
 
 if __name__ == "__main__":
