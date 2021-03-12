@@ -14,6 +14,10 @@ import random
 app = Flask(__name__)
 num = -1
 
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
 @app.route('/')
 def top():
     return render_template('index.html', title='待機')

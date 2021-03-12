@@ -11,6 +11,10 @@ from time import sleep
 
 app = Flask(__name__)
 
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
 @app.route('/<ngrok_url>')
 def top(ngrok_url=None):
     url = "http://my-16421.azurewebsites.net/omikuji/api/ngrok_update.php?ngrok_url=" + ngrok_url
