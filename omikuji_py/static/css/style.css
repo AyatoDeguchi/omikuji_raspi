@@ -16,7 +16,7 @@ body{
   background-color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   color: #000;
-  font-size: 96px;
+  font-size: 128px;
 }
 .log{
   text-align: center;
@@ -30,7 +30,7 @@ body{
   background-color: rgba(255, 178, 161, 0.5);
 }
 .inner{
-  width: 530px;
+  width: 900px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -100,5 +100,5 @@ body{
 }
 
 .omikuji_img img{
-  height: 600px;
+  height: 80%;
 }
