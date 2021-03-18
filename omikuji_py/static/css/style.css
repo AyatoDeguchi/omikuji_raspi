@@ -1,6 +1,6 @@
 body{
   background: url(/static/image/backimg.jpg) center center / cover no-repeat fixed;
-  font-size: 32px;
+  font-size: 48px;
   padding: 0;
   height: 100%;
 }
@@ -16,7 +16,7 @@ body{
   background-color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   color: #000;
-  font-size: 84px;
+  font-size: 96px;
 }
 .log{
   text-align: center;
@@ -95,7 +95,7 @@ body{
     height: auto;
     width: auto;
     max-width: 70%;
-    max-height: 60%;
+    max-height: 80%;
     margin: auto;
 }
 
