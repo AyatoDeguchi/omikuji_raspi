@@ -11,7 +11,7 @@ function exePHPFunc_ngrok_update(parameter)
 {
   var defer = $.Deferred();
 	$.ajax({
-		url: "http://my-16421.azurewebsites.net/omikuji/api/ngrok_update.php",
+		url: "http://mediacore.jp/omikuji/api/ngrok_update.php",
 		type: "POST",
   	    data: parameter,
 		scriptCharset: 'utf-8',

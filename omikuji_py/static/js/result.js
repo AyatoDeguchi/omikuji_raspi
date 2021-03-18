@@ -17,7 +17,7 @@ function exePHPFunc_deactivated(parameter)
 {
   var defer = $.Deferred();
 	$.ajax({
-		url: "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php",
+		url: "http://mediacore.jp/omikuji/api/deactivated.php",
 		type: "POST",
   	data: parameter,
 		scriptCharset: 'utf-8',

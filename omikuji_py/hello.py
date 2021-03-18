@@ -36,7 +36,7 @@ def execution(run_id=None):
 
 @app.route('/animation/<run_id>')
 def animation(run_id=None):
-    url = "https://my-16421.azurewebsites.net/omikuji/api/result_maxid.php"
+    url = "https://mediacore.jp/omikuji/api/result_maxid.php"
     maxnum = int(requests.get(url).text)
     if(maxnum >= 1):
         num = random.randint(1,maxnum)
@@ -47,9 +47,9 @@ def animation(run_id=None):
 @app.route('/result/<run_id>', methods=['GET', 'POST'])
 def result(run_id=None):
     num = request.args.get('num')
-    url = "http://my-16421.azurewebsites.net/omikuji/api/deactivated.php?run_id=" + run_id + "&num=" + num
+    url = "http://mediacore.jp/omikuji/api/deactivated.php?run_id=" + run_id + "&num=" + num
     requests.get(url)
-    url = "http://my-16421.azurewebsites.net/omikuji/api/result_raspi_imgurl_get.php?num=" + num
+    url = "http://mediacore.jp/omikuji/api/result_raspi_imgurl_get.php?num=" + num
     img_url = requests.get(url).text
     return render_template('result/index.html', title='結果', run_id=run_id , num=num , img_url=img_url)
 

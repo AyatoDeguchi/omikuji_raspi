@@ -18,7 +18,7 @@ def favicon():
 
 @app.route('/<ngrok_url>')
 def top(ngrok_url=None):
-    url = "http://my-16421.azurewebsites.net/omikuji/api/ngrok_update.php?ngrok_url=" + ngrok_url
+    url = "http://mediacore.jp/omikuji/api/ngrok_update.php?ngrok_url=" + ngrok_url
     requests.get(url)
     return render_template('ngrok.html',title='running',ngrok_url= ngrok_url)
 
